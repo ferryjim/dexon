@@ -93,7 +93,7 @@ func (s *WatchCatTestSuite) TestBasicUsage() {
 		}
 	}
 
-	time.Sleep(timeout)
+	time.Sleep(timeout * 10)
 	rec.lock.RLock()
 	s.Require().Equal(1, len(rec.votes))
 	s.Require().Equal(uint64(1), rec.votes[pos.Height])
